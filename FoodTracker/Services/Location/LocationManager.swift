@@ -38,12 +38,12 @@ class LocationManager: NSObject {
         case .authorizedWhenInUse, .authorizedAlways:
             break
         case .denied:
-            print("No se otorgaron los permisos")
+            print("Usuario no dio permisos")
             break
         case .notDetermined:
             locationManager.requestAlwaysAuthorization()
         case .restricted:
-            print("Parental Control")
+            print("Usuario no puede dar permisos de ubicación")
             break
         @unknown default:
             fatalError("Caso no contemplado")
@@ -190,4 +190,3 @@ extension LocationManager: CLLocationManagerDelegate {
         delegate?.locationManager(self, didExitRegionWithIdentifier: region.identifier)
     }
 }
-
