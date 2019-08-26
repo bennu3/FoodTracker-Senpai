@@ -29,23 +29,10 @@ class FavoriteCollectionViewCell: UICollectionViewCell {
     var food: Foods! {
         didSet {
             titleLabel.text = "\(food.name)"
-            typeFoodLabel.text = food.type
+            typeFoodLabel.text = food.description
             
 //            imageViewCell.image = food.imageURL
 //                {
-//                DispatchQueue.main.async {
-//                    self.activityIndicator.stopAnimating()
-//                    self.activityIndicator.isHidden = true
-//                }
-//            }
-        }
-    }
-    
-    var restaurants: Restaurant! {
-        didSet {
-            restaurantLabel.text = restaurants.name
-            rankingLabel.text = String(restaurants.ranking)
-//            startImageView?.load(fromURL: restaurants.imageURL) {
 //                DispatchQueue.main.async {
 //                    self.activityIndicator.stopAnimating()
 //                    self.activityIndicator.isHidden = true

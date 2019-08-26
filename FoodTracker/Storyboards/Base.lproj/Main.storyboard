@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map-->
+        <!--Map Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapController" customModule="FoodTracker" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TypeFood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pv7-lK-EBT">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TypeFood" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pv7-lK-EBT">
                                         <rect key="frame" x="95" y="38.5" width="185" height="20.5"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -89,7 +89,6 @@
                                     <constraint firstItem="vCn-UB-tRd" firstAttribute="top" secondItem="Pv7-lK-EBT" secondAttribute="bottom" constant="5" id="6dd-E8-9l6"/>
                                     <constraint firstItem="ZmH-CK-IfJ" firstAttribute="top" secondItem="rc8-2O-Enh" secondAttribute="top" id="AVW-9r-lOS"/>
                                     <constraint firstItem="vCn-UB-tRd" firstAttribute="leading" secondItem="rc8-2O-Enh" secondAttribute="trailing" constant="10" id="Onn-8Z-nkg"/>
-                                    <constraint firstItem="rc8-2O-Enh" firstAttribute="top" secondItem="7y3-Ly-mOO" secondAttribute="top" constant="15" id="RpD-3d-PxE"/>
                                     <constraint firstItem="Pv7-lK-EBT" firstAttribute="trailing" secondItem="ZmH-CK-IfJ" secondAttribute="trailing" id="Yke-op-BUJ"/>
                                     <constraint firstAttribute="width" constant="300" id="fni-kz-8jZ"/>
                                     <constraint firstAttribute="height" constant="100" id="l8z-hl-sHG"/>
@@ -97,6 +96,7 @@
                                     <constraint firstItem="Pv7-lK-EBT" firstAttribute="leading" secondItem="ZmH-CK-IfJ" secondAttribute="leading" id="nqA-Kv-Ac1"/>
                                     <constraint firstItem="rc8-2O-Enh" firstAttribute="leading" secondItem="7y3-Ly-mOO" secondAttribute="leading" constant="15" id="oZn-a5-lD8"/>
                                     <constraint firstItem="Pv7-lK-EBT" firstAttribute="top" secondItem="ZmH-CK-IfJ" secondAttribute="bottom" id="qBD-xO-5Io"/>
+                                    <constraint firstItem="rc8-2O-Enh" firstAttribute="top" secondItem="7y3-Ly-mOO" secondAttribute="top" constant="15" id="qyt-hZ-h54"/>
                                     <constraint firstItem="ZmH-CK-IfJ" firstAttribute="leading" secondItem="rc8-2O-Enh" secondAttribute="trailing" constant="10" id="tfi-w5-352"/>
                                 </constraints>
                             </view>
@@ -112,7 +112,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="xml-Mx-Is5"/>
+                    <navigationItem key="navigationItem" id="S4s-0r-Hi1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Dct-zr-Jxv"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="fiveStartImageView" destination="ufs-uk-Ydw" id="04S-rf-hxF"/>
                         <outlet property="fourStartImageView" destination="eWS-fx-Idf" id="Vek-Tg-dW2"/>
@@ -130,51 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
-        </scene>
-        <!--Select Address Controller-->
-        <scene sceneID="rwS-Ol-J4O">
-            <objects>
-                <tableViewController storyboardIdentifier="SelectAddressController" id="PVP-5R-VRy" customClass="SelectAddressController" customModule="FoodTracker" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="A93-og-TLU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressCell" focusStyle="custom" textLabel="Bip-0E-p1U" detailTextLabel="Tk2-AH-wbE" style="IBUITableViewCellStyleSubtitle" id="zE0-Bv-ATb">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zE0-Bv-ATb" id="pkk-ua-tkr">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bip-0E-p1U">
-                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tk2-AH-wbE">
-                                            <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="PVP-5R-VRy" id="jTd-Ew-B25"/>
-                            <outlet property="delegate" destination="PVP-5R-VRy" id="Wt9-qq-M2f"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DB7-eK-pPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1977" y="130"/>
+            <point key="canvasLocation" x="2868.115942028986" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>

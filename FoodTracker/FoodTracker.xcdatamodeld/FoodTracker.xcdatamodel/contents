@@ -4,7 +4,7 @@
         <attribute name="address" attributeType="String" syncable="YES"/>
         <attribute name="city" attributeType="String" syncable="YES"/>
         <attribute name="country" attributeType="String" syncable="YES"/>
-        <attribute name="foodType" attributeType="String" syncable="YES"/>
+        <attribute name="foodDescription" attributeType="String" syncable="YES"/>
         <attribute name="imageURL" attributeType="String" syncable="YES"/>
         <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>

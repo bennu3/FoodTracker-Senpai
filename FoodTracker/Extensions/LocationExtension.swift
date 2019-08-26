@@ -1,8 +1,8 @@
 //
-//  LocationExtensions.swift
+//  LocationExtension.swift
 //  FoodTracker
 //
-//  Created by Diego Garcia on 8/14/19.
+//  Created by Diego Garcia on 8/18/19.
 //  Copyright © 2019 Diego Garcia. All rights reserved.
 //
 
@@ -17,6 +17,7 @@ extension MKMapView {
                                         longitudinalMeters: longitudinalMeters)
         self.setRegion(region, animated: true)
     }
+
     
     func center(on location: Location, latitudinalMeters: Double, longitudinalMeters: Double) {
         
@@ -30,6 +31,7 @@ extension MKMapView {
         annotation.title = title
         addAnnotation(annotation)
     }
+    
     
 }
 
@@ -63,3 +65,4 @@ extension CLLocation {
     }
     
 }
+

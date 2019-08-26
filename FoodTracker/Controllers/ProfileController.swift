@@ -29,7 +29,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var favoriteCollectionView: UICollectionView!
     
     private var foods: [Foods] = []
-    private var restaurants: [Restaurant] = []
+//    private var restaurants: [Restaurant] = []
+    
+    var foodName: String?
+    var foodImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c1a-4Z-idC">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="SbE-AX-CR6">
+            <objects>
+                <viewController id="c1a-4Z-idC" customClass="LoginViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PYz-Sf-czz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tep-Gc-saH">
+                                <rect key="frame" x="10" y="84" width="394" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="da9-zZ-lPJ"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email / Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ax4-VL-NLx">
+                                <rect key="frame" x="50" y="464" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IbA-0B-dom"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPd-kJ-1Jo">
+                                <rect key="frame" x="50" y="534" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zol-eU-Ynd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qB-Wn-3Gp">
+                                <rect key="frame" x="247" y="798" width="47" height="34"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                                <state key="normal" title="SignUp"/>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="c1a-4Z-idC" eventType="touchUpInside" id="egB-EB-Edm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3y-c8-200">
+                                <rect key="frame" x="98" y="732" width="67" height="30"/>
+                                <state key="normal" title="Facebook"/>
+                                <connections>
+                                    <action selector="fbSignUpButtonPressed:" destination="c1a-4Z-idC" eventType="touchUpInside" id="kAr-CA-g1P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLW-bf-RXC">
+                                <rect key="frame" x="185" y="732" width="50" height="30"/>
+                                <state key="normal" title="Google"/>
+                                <connections>
+                                    <action selector="ggButtonPressed:" destination="c1a-4Z-idC" eventType="touchUpInside" id="MPN-G0-Lae"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk3-Wf-bZg">
+                                <rect key="frame" x="255" y="732" width="69" height="30"/>
+                                <state key="normal" title="Instagram"/>
+                                <connections>
+                                    <action selector="igButonPressed:" destination="c1a-4Z-idC" eventType="touchUpInside" id="kF9-2J-bZf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIw-eJ-1Ua">
+                                <rect key="frame" x="85" y="798" width="156.5" height="34"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFi-3N-LPA">
+                                <rect key="frame" x="80" y="614" width="254" height="50"/>
+                                <color key="backgroundColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rLP-yE-5il"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="c1a-4Z-idC" eventType="touchUpInside" id="OhH-ga-yjg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ax4-VL-NLx" firstAttribute="leading" secondItem="vry-Ik-rgK" secondAttribute="leading" constant="50" id="0P4-6I-xOT"/>
+                            <constraint firstItem="oIw-eJ-1Ua" firstAttribute="centerY" secondItem="2qB-Wn-3Gp" secondAttribute="centerY" id="7aI-aM-4ku"/>
+                            <constraint firstItem="Gk3-Wf-bZg" firstAttribute="centerY" secondItem="HLW-bf-RXC" secondAttribute="centerY" id="EHe-PB-y7j"/>
+                            <constraint firstItem="eFi-3N-LPA" firstAttribute="leading" secondItem="vry-Ik-rgK" secondAttribute="leading" constant="80" id="GBV-xZ-PAL"/>
+                            <constraint firstItem="Tep-Gc-saH" firstAttribute="centerX" secondItem="vry-Ik-rgK" secondAttribute="centerX" id="Hci-k2-CCr"/>
+                            <constraint firstItem="vry-Ik-rgK" firstAttribute="trailing" secondItem="2qB-Wn-3Gp" secondAttribute="trailing" constant="120" id="Hr3-g2-BeV"/>
+                            <constraint firstItem="Gk3-Wf-bZg" firstAttribute="leading" secondItem="HLW-bf-RXC" secondAttribute="trailing" constant="20" id="Jpe-np-2IP"/>
+                            <constraint firstItem="vry-Ik-rgK" firstAttribute="trailing" secondItem="Ax4-VL-NLx" secondAttribute="trailing" constant="50" id="Mci-eh-68N"/>
+                            <constraint firstItem="vry-Ik-rgK" firstAttribute="trailing" secondItem="eFi-3N-LPA" secondAttribute="trailing" constant="80" id="NYm-0x-gdl"/>
+                            <constraint firstItem="vry-Ik-rgK" firstAttribute="trailing" secondItem="Tep-Gc-saH" secondAttribute="trailing" constant="10" id="P6U-bM-xVu"/>
+                            <constraint firstItem="oIw-eJ-1Ua" firstAttribute="top" secondItem="HLW-bf-RXC" secondAttribute="bottom" constant="36" id="PKH-0f-Vo7"/>
+                            <constraint firstItem="vry-Ik-rgK" firstAttribute="trailing" secondItem="Gk3-Wf-bZg" secondAttribute="trailing" constant="90" id="SiQ-O1-aPF"/>
+                            <constraint firstItem="Ax4-VL-NLx" firstAttribute="top" secondItem="Tep-Gc-saH" secondAttribute="bottom" constant="80" id="U4l-8z-l6B"/>
+                            <constraint firstItem="vry-Ik-rgK" firstAttribute="bottom" secondItem="oIw-eJ-1Ua" secondAttribute="bottom" constant="30" id="VVZ-5Z-8pw"/>
+                            <constraint firstItem="eFi-3N-LPA" firstAttribute="top" secondItem="vPd-kJ-1Jo" secondAttribute="bottom" constant="30" id="alg-SI-4Kn"/>
+                            <constraint firstItem="vPd-kJ-1Jo" firstAttribute="top" secondItem="Ax4-VL-NLx" secondAttribute="bottom" constant="20" id="c9j-5g-YAl"/>
+                            <constraint firstItem="HLW-bf-RXC" firstAttribute="top" secondItem="eFi-3N-LPA" secondAttribute="bottom" constant="68" id="gVV-CX-jUL"/>
+                            <constraint firstItem="vry-Ik-rgK" firstAttribute="bottom" secondItem="2qB-Wn-3Gp" secondAttribute="bottom" constant="30" id="jiG-MU-uMZ"/>
+                            <constraint firstItem="Tep-Gc-saH" firstAttribute="top" secondItem="vry-Ik-rgK" secondAttribute="top" constant="40" id="kkR-g5-JWg"/>
+                            <constraint firstItem="HLW-bf-RXC" firstAttribute="leading" secondItem="j3y-c8-200" secondAttribute="trailing" constant="20" id="mMm-dV-CBh"/>
+                            <constraint firstItem="oIw-eJ-1Ua" firstAttribute="leading" secondItem="vry-Ik-rgK" secondAttribute="leading" constant="85" id="oUh-lz-pnl"/>
+                            <constraint firstItem="vry-Ik-rgK" firstAttribute="trailing" secondItem="vPd-kJ-1Jo" secondAttribute="trailing" constant="50" id="tBU-tB-wpS"/>
+                            <constraint firstItem="j3y-c8-200" firstAttribute="centerY" secondItem="HLW-bf-RXC" secondAttribute="centerY" id="ufz-oI-kVJ"/>
+                            <constraint firstItem="vPd-kJ-1Jo" firstAttribute="leading" secondItem="vry-Ik-rgK" secondAttribute="leading" constant="50" id="vx6-W0-O8W"/>
+                            <constraint firstItem="Tep-Gc-saH" firstAttribute="leading" secondItem="vry-Ik-rgK" secondAttribute="leading" constant="10" id="zNb-K0-MO5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vry-Ik-rgK"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="eFi-3N-LPA" id="Kve-eW-zL2"/>
+                        <outlet property="logoImageView" destination="Tep-Gc-saH" id="ncG-Fv-plV"/>
+                        <outlet property="passwordTextField" destination="vPd-kJ-1Jo" id="Hms-q5-7vc"/>
+                        <outlet property="usernameTextField" destination="Ax4-VL-NLx" id="Ub1-NP-xay"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOU-er-MmW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2961" y="66"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color name="ibMissingResourceColor" catalog="#$assets-com.apple.dt.DVTKit" colorSpace="catalog"/>
+        </namedColor>
+    </resources>
+</document>

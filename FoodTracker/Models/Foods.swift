@@ -8,36 +8,17 @@
 
 import Foundation
 
-struct Foods: Equatable {
+struct Foods {
     
     var name: String
+    var description: String
     var imageURL: String
-    var type: String
     
-    enum CodingKeys: String, CodingKey {
-        case name
-        case type
-        case imageURL = "image_url"
-        case title
+    static var all: Foods {
+        let favoritesFoods =
+            Foods(name: "pizzar",
+                   description: "napolitana",
+                   imageURL: "pizza")
+        return favoritesFoods
     }
-    
-    init(name: String, restaurant: Restaurant, type: String) {
-        self.name = name
-        self.imageURL = ""
-        self.type = type
-    }
-}
-
-extension Foods {
-    init(managedObject: ManagedRestaurant) {
-        self.name = managedObject.name
-        self.imageURL = managedObject.imageURL
-        self.type = managedObject.foodType
-    }
-    
-    func fill(managedObject: ManagedRestaurant) {
-        managedObject.name = self.name
-        managedObject.imageURL = self.imageURL
-    }
-    
 }

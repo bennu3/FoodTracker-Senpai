@@ -23,7 +23,7 @@ extension ManagedRestaurant {
     @NSManaged public var imageURL: String
     @NSManaged public var latitude: Double
     @NSManaged public var longitude: Double
-    @NSManaged public var foodType: String
+    @NSManaged public var foodDescription: String
     @NSManaged public var ranking: Double
     @NSManaged public var name: String
 
